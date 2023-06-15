@@ -1,5 +1,5 @@
 body {
-  width: 90%;
+  width: 1400px;
   margin: auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -11,21 +11,29 @@ body {
   gap: 50px;
   align-items: center;
   font-weight: 600;
+  background-color: rgb(82,193,247);
 
 }
 
 #navbar>a {
   text-decoration: none;
-  font-size: larger;
+  font-size: large;
+  width: max-content;
+  cursor: pointer;
+}
 
+#navbar>a:focus {
+  transform: scale(1.1);
 }
 
 #navbar>a {
-  transition: transform 0.3s;
+  transition: color 0.3s;
+
 }
 
 #navbar>a:hover {
-  transform: scale(1.1);
+  color: #dc3545;
+
 }
 
 #navbar>input {
@@ -41,13 +49,265 @@ body {
 
 #navbar>img {
   height: 80px;
+ 
 
 }
-#navbar > img {
-  height: 80px;
+
+#navbar>img {
   transition: transform 0.3s;
 }
 
-#navbar > img:hover {
+#navbar>img:hover {
   transform: scale(1.1);
+}
+
+#dashboard {
+  background-color: rgb(82, 193, 247);
+  height: 800px;
+  display: flex;
+  overflow: hidden;
+
+
+}
+
+#dashboard>div:nth-child(1) {
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 70px;
+
+}
+
+#dashboard>div:nth-child(1)>div>img:nth-child(1) {
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+#dashboard>div:nth-child(1)>div>img:nth-child(2) {
+  margin-left: 300px;
+  margin-bottom: 0px;
+}
+
+#dashboard h1 {
+  color: white;
+  letter-spacing: 1mm;
+  font-size: 80px;
+  margin-bottom: 0px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+#dashboard h3 {
+  color: white;
+  letter-spacing: 0.5mm;
+  font-size: 45px;
+  margin-top: 0;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+#dashboard>div:nth-child(1)>img {
+  width: 280px;
+  opacity: 1;
+  transition: opacity 1s ease;
+
+}
+
+#dashboard>div:nth-child(1)>img:hover {
+  opacity: 0;
+}
+
+#dashboard>div:nth-child(2) {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transform: rotate(-30deg) skewX(0deg);
+  margin-top: 300px;
+  margin-left: 40px;
+}
+
+#dashboard>div:nth-child(2)>img {
+  width: 300px;
+  height: 620px;
+
+}
+
+
+
+
+#aboutusers {
+  padding-left: 70px;
+
+  padding-right: 70px;
+  height: 1100px;
+}
+
+#aboutusers>h1 {
+  color: rgb(82, 193, 247);
+  margin-top: 80px;
+  margin-bottom: 90px; 
+ font-weight: 500;
+ font-size: xxx-large;
+}
+
+#aboutusers>div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+#aboutusers div>img {
+
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+}
+
+#aboutusers div>h3 {
+  margin-bottom: -10px;
+  font-size: x-large;
+}
+
+#aboutusers div>p {
+ font-size: x-large;
+  text-align: left;
+  color:rgb(32, 32, 59);
+}
+
+
+
+
+#onboarding{
+  background-color: rgb(82, 193, 247);
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 70px;
+ height: 1550px;
+  
+}
+
+#onboarding>div>h1{
+  color: white;
+ 
+  margin-bottom: 90px; 
+ font-weight: 500;
+ font-size: xxx-large;
+}
+
+#onboarding>div>p{
+  font-size: x-large;
+  text-align: left; 
+ 
+  width: 800px;
+  font-weight: 450;
+  line-height: 1.1;
+ 
+}
+
+#onboarding>div:nth-child(2){
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+ 
+  box-sizing: border-box;
+  justify-items: center;
+ 
+}
+#onboarding>div:nth-child(2)>img{
+  /* width: 300px;
+  height: 620px; */
+}
+#onboarding>div:nth-child(2)>img:nth-child(1){
+  margin-top: 50px;
+  transform: rotate(-8deg);
+  margin-left: 50px;
+}
+#onboarding>div:nth-child(2)>img:nth-child(2){
+margin-top: 240px;
+transform: rotate(8deg);
+margin-left: 100px;
+}
+#onboarding>div:nth-child(2)>img:nth-child(3){
+margin-left: 80px;
+}
+
+
+
+
+#architecture{
+padding-left: 70px;
+}
+
+#architecture h1{
+  color: rgb(82, 193, 247);
+  margin-top: 100px;
+  margin-bottom: 90px; 
+ font-weight: 500;
+ font-size: xxx-large;
+}
+
+#architecture>div:nth-child(2)>h1{
+  color: rgb(82, 193, 247);
+  margin-top: 80px;
+  margin-bottom: 90px; 
+ font-weight: 500;
+ font-size: xxx-large;
+ text-align: center;
+}
+
+
+
+
+#tree{
+  display: flex;
+gap: 90px;
+
+}
+#tree>div{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+#tree button{
+  background-color: rgb(82, 193, 247);
+  border-radius: 10px;
+  border: none;
+  width: 215px;
+  height: 110px;
+  font-size: larger;
+}
+
+#tree>div:nth-child(3){
+  margin-top: 360px;
+  
+}
+#tree>div:nth-child(2){
+  margin-top: 290px;
+}
+#tree>div:nth-child(3)>button{
+ font-weight: bold;
+}
+#tree>div:nth-child(1){
+  margin-top: 360px;
+  
+}
+#tree>div:nth-child(1)>button{
+ color: white;
+  font-weight: bold;
+}
+
+#tree div:nth-child(4)>button{
+  width: 180px;
+}
+
+
+#architecture>div:nth-child(2){
+  margin-top: 275px;
+ text-align: center;
+}
+#architecture>div:nth-child(2)>h1{
+ font-size: 70px;
 }
