@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Document</title>
+    <a style="text-decoration: none; color: white; font-size: x-large;top: 10px ;left: 10px; position: absolute;"
+        href="index.html"><img style="width: 30px;height: 30px;" src="home.png" alt=""> Home</a>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="WordWise.png" alt="">
+    </div>
+    <div id="login">
+        <h1>Sign up</h1>
+        <div>Already have an account? <a style="text-decoration: none;" href="login.html"> Login here</a></div>
+
+        <form>
+            <input id="firstname" type="text" placeholder="First name" required>
+            <input type="text" name="" id="lastname" placeholder="Last name" required>
+
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <input id="repassword" type="password" placeholder="Enter your password again" required>
+            <input type="submit" value="Submit">
+        </form>
+        <p>------------Or------------</p>
+        <div id="other">
+            <a href="">
+                <img src="google.png" alt="">
+                Signup with Google
+            </a>
+
+            <a href="">
+                <img src="facebook.png" alt="">
+                Signup with Facebook
+            </a>
+
+            <a href="">
+                <img src="apple.png" alt="">
+                Signup with Apple
+            </a>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    let storedata = localStorage.getItem("storedata")
+    let form = document.querySelector("form")
+    let firstname = document.getElementById("firstname")
+    let lastname = document.getElementById("lastname")
+    let email = document.getElementById("email")
+    let password = document.getElementById("password")
+    let repassword = document.getElementById("repassword")
+
+    if (storedata == null) {
+        storedata = []
+    }
+    else {
+        storedata = JSON.parse(storedata)
+    }
+        form.addEventListener("submit", function () {
+            if (password.value === repassword.value) {
+                let data = {
+                    firstname: firstname.value,
+                    lastname: lastname.value,
+                    email: email.value,
+                    password: password.value
+                }
+                storedata.push(data)
+                localStorage.setItem("storedata", JSON.stringify(storedata))
+                alert("account created sucessfully")
+             
+            }
+            else {
+                event.preventDefault()
+                alert("password and re-typed password didn't match!")
+            }
+
+        })
+
+
+</script>

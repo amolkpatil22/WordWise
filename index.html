@@ -9,15 +9,15 @@
 </head>
 
 <body>
-  <div id="navbar">
-    <img src="Kimberly.png" alt="" />
-    <a href="">HOME</a>
-    <a href="">ABOUT USERS</a>
-    <a href="">ONBOARDING</a>
+  <div id="navbar">    
+    <img src="WordWise.png" alt="" />
+    <a id="home" href="">HOME</a>
+    <a id="ABOUT-USERS" href="">ABOUT USERS</a>
+    <a id="ONBOARDING" href="">ONBOARDING</a>
     <input type="text" placeholder="Search" id="" />
-    <a href="">LOGIN</a>
-    <a href="">SIGNUP</a>
-    <a href="">PROFILE</a>
+    <a href="login.html">LOGIN</a>
+    <a href="signup.html">SIGNUP</a>
+    <img style="border-radius: 50%;width: 50px;height: 50px;" id="profile" src="profile.png" alt="">
   </div>
   <div id="dashboard">
     <div>
@@ -30,8 +30,11 @@
       <img src="cat.png" alt="" />
     </div>
     <div>
+
       <img src="Discover new.png" alt="" />
+
       <img style="margin-top: -180px" src="improve learning.png" alt="" />
+
       <img src="improve learning.png" alt="" />
       <img src="Discover new.png" alt="" />
       <img style="margin-top: -180px" src="Discover new.png" alt="" />
@@ -131,3 +134,34 @@
 </body>
 
 </html>
+
+<script>
+
+  let home = document.getElementById("home")
+  let dashboard = document.getElementById("dashboard")
+  
+  let ABOUT_USERS=document.getElementById("ABOUT-USERS")
+  let aboutusers = document.getElementById("aboutusers")
+
+  let ONBOARDING=document.getElementById("ONBOARDING")
+  let onboarding = document.getElementById("onboarding")
+
+
+  home.addEventListener("click", function () {
+    event.preventDefault()
+    dashboard.scrollIntoView({ behavior: 'smooth' });
+  })
+
+  ABOUT_USERS.addEventListener("click", function () {
+    event.preventDefault()
+    aboutusers.scrollIntoView({ behavior: 'smooth' });
+  })
+
+  ONBOARDING.addEventListener("click", function () {
+    event.preventDefault()
+    onboarding.scrollIntoView({ behavior: 'smooth' });
+  })
+
+
+
+</script>
