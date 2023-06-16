@@ -5,21 +5,31 @@ body {
 }
 
 #navbar {
+
+
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, auto);
   grid-template-rows: repeat(1, auto);
-  gap: 50px;
+  /* gap: 40px; */
   align-items: center;
   font-weight: 600;
-  background-color: rgb(82,193,247);
+
+  /* background-color: rgb(82, 193, 247); */
+  box-sizing: border-box;
+  /* padding-left: 70px; */
+  /* padding-right: 0px; */
 
 }
+
+
 
 #navbar>a {
   text-decoration: none;
   font-size: large;
   width: max-content;
   cursor: pointer;
+
+
 }
 
 #navbar>a:focus {
@@ -49,7 +59,7 @@ body {
 
 #navbar>img {
   height: 80px;
- 
+
 
 }
 
@@ -66,7 +76,8 @@ body {
   height: 800px;
   display: flex;
   overflow: hidden;
-
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
 }
 
@@ -131,10 +142,13 @@ body {
 #dashboard>div:nth-child(2)>img {
   width: 300px;
   height: 620px;
-
+  transition: 0.3s;
 }
 
+#dashboard>div:nth-child(2)>img:hover {
+  transform: scale(1.05);
 
+}
 
 
 #aboutusers {
@@ -147,9 +161,9 @@ body {
 #aboutusers>h1 {
   color: rgb(82, 193, 247);
   margin-top: 80px;
-  margin-bottom: 90px; 
- font-weight: 500;
- font-size: xxx-large;
+  margin-bottom: 90px;
+  font-weight: 500;
+  font-size: xxx-large;
 }
 
 #aboutusers>div {
@@ -171,107 +185,115 @@ body {
 }
 
 #aboutusers div>p {
- font-size: x-large;
+  font-size: x-large;
   text-align: left;
-  color:rgb(32, 32, 59);
+  color: rgb(32, 32, 59);
 }
 
 
 
 
-#onboarding{
+#onboarding {
   background-color: rgb(82, 193, 247);
   padding-left: 70px;
   padding-right: 70px;
   padding-top: 70px;
- height: 1550px;
-  
+  height: 1550px;
+
 }
 
-#onboarding>div>h1{
+#onboarding>div>h1 {
   color: white;
- 
-  margin-bottom: 90px; 
- font-weight: 500;
- font-size: xxx-large;
+
+  margin-bottom: 90px;
+  font-weight: 500;
+  font-size: xxx-large;
 }
 
-#onboarding>div>p{
+#onboarding>div>p {
   font-size: x-large;
-  text-align: left; 
- 
+  text-align: left;
+
   width: 800px;
   font-weight: 450;
   line-height: 1.1;
- 
+
 }
 
-#onboarding>div:nth-child(2){
+#onboarding>div:nth-child(2) {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
- 
+  grid-template-columns: repeat(3, 1fr);
+
   box-sizing: border-box;
   justify-items: center;
- 
+
 }
-#onboarding>div:nth-child(2)>img{
+
+#onboarding>div:nth-child(2)>img {
   /* width: 300px;
   height: 620px; */
+  transition: 0.3s;
 }
-#onboarding>div:nth-child(2)>img:nth-child(1){
+
+#onboarding>div:nth-child(2)>img:nth-child(1) {
   margin-top: 50px;
   transform: rotate(-8deg);
   margin-left: 50px;
 }
-#onboarding>div:nth-child(2)>img:nth-child(2){
-margin-top: 240px;
-transform: rotate(8deg);
-margin-left: 100px;
-}
-#onboarding>div:nth-child(2)>img:nth-child(3){
-margin-left: 80px;
+
+#onboarding>div:nth-child(2)>img:nth-child(2) {
+  margin-top: 240px;
+  transform: rotate(8deg);
+  margin-left: 100px;
 }
 
-
-
-
-#architecture{
-padding-left: 70px;
+#onboarding>div:nth-child(2)>img:nth-child(3) {
+  margin-left: 80px;
 }
 
-#architecture h1{
+#onboarding>div:nth-child(2)>img:hover {
+  transform: scale(1.05);
+}
+
+
+#architecture {
+  padding-left: 70px;
+}
+
+#architecture h1 {
   color: rgb(82, 193, 247);
   margin-top: 100px;
-  margin-bottom: 90px; 
- font-weight: 500;
- font-size: xxx-large;
+  margin-bottom: 90px;
+  font-weight: 500;
+  font-size: xxx-large;
 }
 
-#architecture>div:nth-child(2)>h1{
+#architecture>div:nth-child(2)>h1 {
   color: rgb(82, 193, 247);
   margin-top: 80px;
-  margin-bottom: 90px; 
- font-weight: 500;
- font-size: xxx-large;
- text-align: center;
+  margin-bottom: 90px;
+  font-weight: 500;
+  font-size: xxx-large;
+  text-align: center;
 }
 
 
 
 
-#tree{
+#tree {
   display: flex;
-gap: 90px;
+  gap: 90px;
 
 }
-#tree>div{
+
+#tree>div {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
 }
 
-#tree button{
+#tree button {
   background-color: rgb(82, 193, 247);
   border-radius: 10px;
   border: none;
@@ -280,34 +302,41 @@ gap: 90px;
   font-size: larger;
 }
 
-#tree>div:nth-child(3){
+#tree>div:nth-child(3) {
   margin-top: 360px;
-  
+
 }
-#tree>div:nth-child(2){
+
+#tree>div:nth-child(2) {
   margin-top: 290px;
 }
-#tree>div:nth-child(3)>button{
- font-weight: bold;
-}
-#tree>div:nth-child(1){
-  margin-top: 360px;
-  
-}
-#tree>div:nth-child(1)>button{
- color: white;
+
+#tree>div:nth-child(3)>button {
   font-weight: bold;
 }
 
-#tree div:nth-child(4)>button{
+#tree>div:nth-child(1) {
+  margin-top: 360px;
+
+}
+
+#tree>div:nth-child(1)>button {
+  color: white;
+  font-weight: bold;
+}
+
+#tree div:nth-child(4)>button {
   width: 180px;
 }
 
 
-#architecture>div:nth-child(2){
+#architecture>div:nth-child(2) {
   margin-top: 275px;
- text-align: center;
+  text-align: center;
 }
-#architecture>div:nth-child(2)>h1{
- font-size: 70px;
+
+#architecture>div:nth-child(2)>h1 {
+  font-size: 70px;
 }
+
+
