@@ -64,31 +64,37 @@
     let password = document.getElementById("password")
     let repassword = document.getElementById("repassword")
 
+
+
     if (storedata == null) {
         storedata = []
     }
     else {
         storedata = JSON.parse(storedata)
     }
-        form.addEventListener("submit", function () {
-            if (password.value === repassword.value) {
-                let data = {
-                    firstname: firstname.value,
-                    lastname: lastname.value,
-                    email: email.value,
-                    password: password.value
-                }
-                storedata.push(data)
-                localStorage.setItem("storedata", JSON.stringify(storedata))
-                alert("account created sucessfully")
-             
+    form.addEventListener("submit", function () {
+        event.preventDefault()
+        if (password.value === repassword.value) {
+            let data = {
+                firstname: firstname.value,
+                lastname: lastname.value,
+                email: email.value,
+                password: password.value,
+                
             }
-            else {
-                event.preventDefault()
-                alert("password and re-typed password didn't match!")
-            }
+            storedata.push(data)
+            localStorage.setItem("storedata", JSON.stringify(storedata))
+            localStorage.setItem("isLoggedin",false)
+            alert("account created sucessfully")
+            window.location.href="login.html"
+        }
+        else {
+           
+           
+            alert("password and re-typed password didn't match!")
+        }
 
-        })
+    })
 
 
 </script>

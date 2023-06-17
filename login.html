@@ -58,26 +58,43 @@
 
 </html>
 <script>
+    localStorage.setItem("isLoggedin", false)
     let storedata = localStorage.getItem("storedata")
-    storedata = JSON.parse(storedata)
+
     let form = document.querySelector("form")
     let email = document.getElementById("email")
     let password = document.getElementById("password")
-
+    if (storedata == null) {
+        storedata = []
+    }
+    else {
+        storedata = JSON.parse(storedata)
+    }
     form.addEventListener("submit", function () {
-       
+        event.preventDefault()
         let flag = false
+        let name=""
+        let lastname=""
+        let storedemail=""
         storedata.forEach(element => {
             if (email.value == element.email && password.value == element.password) {
                 flag = true
-
+                 name=element.firstname
+                 lastname=element.lastname
+                 storedemail=element.email
             }
         });
         if (flag == true) {
-           window.location.href="index.html"
-           
+            localStorage.setItem("isLoggedin", true)
+            localStorage.setItem("storedname",name)
+            localStorage.setItem("lastname",lastname)
+            localStorage.setItem("storedemail",storedemail)
+            alert("logged in successfully")
+            window.location.href = "index.html"
+
         }
         else {
+
             alert("Incorrect email or password")
         }
     })

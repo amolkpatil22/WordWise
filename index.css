@@ -13,7 +13,7 @@ body {
   /* gap: 40px; */
   align-items: center;
   font-weight: 600;
-
+  justify-content: space-between;
   /* background-color: rgb(82, 193, 247); */
   box-sizing: border-box;
   /* padding-left: 70px; */
@@ -67,7 +67,7 @@ body {
   transition: transform 0.3s;
 }
 
-#navbar>img:hover {
+#navbar img:hover {
   transform: scale(1.1);
 }
 
@@ -300,6 +300,12 @@ body {
   width: 215px;
   height: 110px;
   font-size: larger;
+
+}
+
+#tree button:focus {
+  background-color: lightgray;
+  transform: translateY(-5px);
 }
 
 #tree>div:nth-child(3) {
@@ -340,3 +346,142 @@ body {
 }
 
 
+#menu {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  position: absolute;
+  z-index: 99999;
+  margin-top: 220px;
+  margin-left: 1160px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 2%;
+  font-size: larger;
+  box-shadow: 1px 2px 1px 1px rgb(204, 191, 191);
+  cursor: pointer;
+  color: rgb(85, 26, 139);
+
+}
+
+#menu a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px
+}
+
+
+
+@media screen and (max-width:451px) {
+
+  #home {
+    display: none;
+
+  }
+
+  #ABOUT-USERS {
+    display: none;
+
+  }
+
+  #ONBOARDING {
+    display: none;
+  }
+
+  #search {
+    display: none;
+  }
+
+  body {
+    width: 100%;
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  #navbar {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
+    font-weight: 600;
+    width: 99%;
+    box-sizing: border-box;
+  }
+
+  #navbar>a {
+    font-size: 100%;
+  }
+
+  #dashboard {
+    height: 100%;
+
+
+
+  }
+
+  #dashboard>div:nth-child(1) {
+    margin-top: 10%;
+    margin-left: 0%;
+
+
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+
+  #dashboard>div:nth-child(1)>div>img:nth-child(1) {
+    margin-left: 5%;
+    margin-bottom: 8%;
+  }
+
+  #dashboard>div:nth-child(1)>div>img:nth-child(2) {
+    margin-left: 60%;
+    margin-bottom: 0px;
+  }
+
+  #dashboard h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    margin-top: 5%;
+  }
+
+  #dashboard h3 {
+    text-align: center;
+    letter-spacing: 0.5mm;
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: 500;
+    margin-bottom: 80px;
+  }
+
+  #dashboard>div:nth-child(1)>img {
+    width: 60%;
+
+    opacity: 1;
+    transition: opacity 1s ease;
+    margin-left: 20%;
+  }
+
+  #dashboard>div:nth-child(2) {
+    display: none;
+  }
+
+  #aboutusers {
+    padding-left: 5%;
+
+    padding-right: 0;
+    height: auto;
+  }
+  #aboutusers>h1 {
+    color: rgb(82, 193, 247);
+    margin-top: 80px;
+    margin-bottom: 90px;
+    font-weight: 500;
+    font-size: xxx-large;
+  }
+  #aboutusers>div {    
+    grid-template-columns: repeat(1, auto);
+    gap: 70px;
+  }
+}

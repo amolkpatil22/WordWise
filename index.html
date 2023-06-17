@@ -9,15 +9,42 @@
 </head>
 
 <body>
-  <div id="navbar">    
+  <div id="navbar">
     <img src="WordWise.png" alt="" />
+
     <a id="home" href="">HOME</a>
     <a id="ABOUT-USERS" href="">ABOUT USERS</a>
     <a id="ONBOARDING" href="">ONBOARDING</a>
-    <input type="text" placeholder="Search" id="" />
-    <a href="login.html">LOGIN</a>
-    <a href="signup.html">SIGNUP</a>
-    <img style="border-radius: 50%;width: 50px;height: 50px;" id="profile" src="profile.png" alt="">
+    <input type="text" placeholder="Search" id="search" />
+    <a id="loginbtn" href="login.html">LOGIN</a>
+    <a id="signupbtn" href="signup.html">SIGNUP</a>
+
+
+
+    <div style="display: flex;gap: 10px;font-size: larger;align-items: center;color: rgb(85,26,139);">
+      <p id="name"></p>
+      <img style="border-radius: 50%;width: 50px;height: 50px;" id="profile" src="profile.png" alt="">
+
+    </div>
+    <div id="menu">
+      <a id="menuhome" href="">🏠 HOME</a>
+      
+
+      <a id="menuaboutusers" href="">🙋 ABOUT USERS</a>
+      <a id="menuonboarding" href="">✍️ ONBOARDING</a>
+      <a id="menuloginbtn" href="login.html">➡️ LOGIN</a>
+      <a id="menusignupbtn" href="signup.html">➡️ SIGNUP</a>
+      <p id="menuname">👤 NAME</p>
+      <p id="menuemail">📧 EMAIl</p>
+      <a href="">💬 CHAT</a>
+      <a href="">☎️ CONTACT</a>
+      <a id="menulogout" href="">📤 LOGOUT</a>
+    </div>
+
+
+
+
+
   </div>
   <div id="dashboard">
     <div>
@@ -29,7 +56,7 @@
       <h3>Languages App</h3>
       <img src="cat.png" alt="" />
     </div>
-    <div>
+    <div id="homeimg">
 
       <img src="Discover new.png" alt="" />
 
@@ -137,14 +164,57 @@
 
 <script>
 
+  let menu = document.getElementById("menu")
+  menu.style.display = "none"
+  
+let menuhome=document.getElementById("menuhome")
+let menulogout=document.getElementById("menulogout")
+let menuaboutusers=document.getElementById("menuaboutusers")
+let menuonboarding=document.getElementById("menuonboarding")
+let menuloginbtn=document.getElementById("menuloginbtn")
+let menusignupbtn=document.getElementById("menusignupbtn")
+let menuname=document.getElementById("menuname")
+let menuemail=document.getElementById("menuemail")
+
+menuhome.style.display="none"
+menulogout.style.display="none"
+menuaboutusers.style.display="none"
+menuonboarding.style.display="none"
+menuloginbtn.style.display="none"
+menusignupbtn.style.display="none"
+menuname.style.display="none"
+menuemail.style.display="none"
+
+  let search = document.getElementById("search")
+  let alltag = document.getElementsByTagName("*")
   let home = document.getElementById("home")
   let dashboard = document.getElementById("dashboard")
+
+  let profile = document.getElementById("profile")
   
-  let ABOUT_USERS=document.getElementById("ABOUT-USERS")
+  let name = document.getElementById("name")
+  name.style.display = "none"
+
+  profile.addEventListener("click", function () {
+    menu.style.display = "block"
+
+  })
+
+
+  let ABOUT_USERS = document.getElementById("ABOUT-USERS")
   let aboutusers = document.getElementById("aboutusers")
 
-  let ONBOARDING=document.getElementById("ONBOARDING")
+  let ONBOARDING = document.getElementById("ONBOARDING")
   let onboarding = document.getElementById("onboarding")
+  let isLoggedin = localStorage.getItem("isLoggedin")
+  let loginbtn = document.getElementById("loginbtn")
+  
+  let signupbtn = document.getElementById("signupbtn")
+  
+  let storedname = localStorage.getItem("storedname")
+let lastname=localStorage.getItem("lastname")
+let storedemail=localStorage.getItem("storedemail")
+
 
 
   home.addEventListener("click", function () {
@@ -164,4 +234,8 @@
 
 
 
+
+
+
 </script>
+<script src="afterlogin.js"></script>
