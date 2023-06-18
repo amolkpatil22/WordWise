@@ -7,10 +7,10 @@ body {
 
 #login{
     margin-left: 200px;
-    margin-top: 50px;
+    margin-top: 40px;
    border-radius: 20px;
   /* border: solid teal ; */
-    height: 650px;
+    height: fit-content;
     width: 400px;
     background-color: white;
     padding: 30px;
@@ -72,11 +72,32 @@ img{
     vertical-align: middle;
     
 }
-
+#logo{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: -10px;
+}
 #logo>img{
  width: 150px;
  height: 50px;
- position: absolute;
- left: 330px;
- top: 650px;
+
+}
+
+
+
+@media screen and (max-width:451px) {
+
+    #login {
+        margin-left: 1%;
+        margin-top: 15%;
+        border-radius: 20px;
+        /* border: solid teal ; */
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        padding: 30px;
+        box-sizing: border-box;
+ 
+    }
+
 }

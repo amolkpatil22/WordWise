@@ -23,6 +23,9 @@ if (isLoggedin == "true") {
     name.style.display = "flex"
     menuname.innerText = "👤 " + storedname.toUpperCase() + " " + lastname.toUpperCase()
 menuemail.innerText="📧 "+ storedemail.toUpperCase()
+
+
+
 }
 
 menulogout.addEventListener("click", function () {

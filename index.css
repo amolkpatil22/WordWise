@@ -169,9 +169,13 @@ body {
 #aboutusers>div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
+  gap: 50px;
 }
-
+#aboutusers>div>div{
+    padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  
+}
 #aboutusers div>img {
 
   border-radius: 50%;
@@ -352,8 +356,8 @@ body {
   flex-direction: column;
   position: absolute;
   z-index: 99999;
-  margin-top: 220px;
-  margin-left: 1160px;
+  margin-top: 14%;
+  margin-left: 79%;
   width: fit-content;
   height: fit-content;
   border-radius: 10px;
@@ -371,6 +375,9 @@ body {
   margin-bottom: 10px
 }
 
+#menulogout{
+  display: none;
+}
 
 
 @media screen and (max-width:451px) {
@@ -392,6 +399,12 @@ body {
   #search {
     display: none;
   }
+  #loginbtn{
+    display: none;
+  }
+  #signupbtn{
+    display: none;
+  }
 
   body {
     width: 100%;
@@ -400,23 +413,28 @@ body {
   }
 
   #navbar {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(1, auto);
     font-weight: 600;
     width: 99%;
     box-sizing: border-box;
+   justify-content: space-between;
   }
 
   #navbar>a {
     font-size: 100%;
+   
+  }
+
+  #navbar>img {
+    size: 100%;
+ 
   }
 
   #dashboard {
     height: 100%;
-
-
-
   }
+
 
   #dashboard>div:nth-child(1) {
     margin-top: 10%;
@@ -470,18 +488,163 @@ body {
   #aboutusers {
     padding-left: 5%;
 
-    padding-right: 0;
-    height: auto;
+    padding-right: 5%;
+    height: max-content;
   }
+
   #aboutusers>h1 {
     color: rgb(82, 193, 247);
-    margin-top: 80px;
-    margin-bottom: 90px;
+    margin-top: 15%;
+    margin-bottom: 15%;
     font-weight: 500;
     font-size: xxx-large;
   }
-  #aboutusers>div {    
+
+  #aboutusers>div {
     grid-template-columns: repeat(1, auto);
-    gap: 70px;
+  
+  }
+ 
+  #aboutusers>div >div:nth-child(3){
+margin-bottom: 10%;
+  }
+  #onboarding {
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+    height: auto;
+
+  }
+
+  #onboarding>div>h1 {
+
+    margin-bottom: 15%;
+    font-weight: 500;
+    font-size: xxx-large;
+  }
+
+  #onboarding>div>p {
+    font-size: x-large;
+    text-align: left;
+
+    width: auto;
+    font-weight: 450;
+    line-height: 1.1;
+
+  }
+
+  #onboarding>div:nth-child(2) {
+    margin-top: 10%;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
+
+  #onboarding>div:nth-child(2)>img:nth-child(1) {
+    margin-top: 10%;
+    transform: rotate(0);
+    margin-left: 0;
+  
+  }
+
+  #onboarding>div:nth-child(2)>img:nth-child(2) {
+    margin-top: 10%;
+    transform: rotate(0);
+    margin-left: 0;
+  }
+
+  #onboarding>div:nth-child(2)>img:nth-child(3) {
+    margin-top: 10%;
+    transform: rotate(0);
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+
+  #architecture {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #architecture h1 {
+
+    margin-top: 15%;
+    margin-bottom: 15%;
+
+  }
+
+  #tree {
+    display: flex;
+   
+    flex-direction: column;
+    padding: 0;
+align-items: center;
+
+  }
+
+  #tree>div {
+    display: flex;
+    flex-direction: column;
+    
+    
+   
+  }
+  #tree button {
+    background-color: rgb(82, 193, 247);
+    border-radius: 10px;
+    border: none;
+    width: 215px;
+    height: 110px;
+    font-size: larger;
+  
+  }
+  #tree>div:nth-child(3) {
+    margin-top: 2%;
+  
+  }
+  #tree>div:nth-child(2) {
+    margin-top: 2%;
+
+  }
+  #tree>div:nth-child(1) {
+    margin-top: 2%;
+  
+  }
+
+  #architecture{
+    height: max-content;
+  }
+  #architecture>div:nth-child(2) {
+    margin-top: 5%;
+    padding: 0;
+    text-align: center;
+   
+   
+  }
+  #architecture>div:nth-child(2)>h1 {
+    font-size: 200%;
+    margin-bottom: 10%;
+  }
+  #architecture>div:nth-child(2)>img {
+   width: 50%;
+   height: 50%;
+   margin-top: 0;
+   margin-bottom: 2%;
+
+  }
+  
+  #menu{
+    margin-top: 50%;
+  margin-left: 68%;
+
+
+ 
+  }
+  #menuhome{
+    display: none;
+  }
+  #menuaboutusers{
+    display: block;
   }
 }

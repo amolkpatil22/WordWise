@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="navbar">
+  <div id="navbar" >
     <img src="WordWise.png" alt="" />
 
     <a id="home" href="">HOME</a>
@@ -28,7 +28,7 @@
     </div>
     <div id="menu">
       <a id="menuhome" href="">🏠 HOME</a>
-      
+
 
       <a id="menuaboutusers" href="">🙋 ABOUT USERS</a>
       <a id="menuonboarding" href="">✍️ ONBOARDING</a>
@@ -36,7 +36,7 @@
       <a id="menusignupbtn" href="signup.html">➡️ SIGNUP</a>
       <p id="menuname">👤 NAME</p>
       <p id="menuemail">📧 EMAIl</p>
-      <a href="">💬 CHAT</a>
+      <a id="menuchat" href="">💬 CHAT</a>
       <a href="">☎️ CONTACT</a>
       <a id="menulogout" href="">📤 LOGOUT</a>
     </div>
@@ -166,36 +166,48 @@
 
   let menu = document.getElementById("menu")
   menu.style.display = "none"
-  
-let menuhome=document.getElementById("menuhome")
-let menulogout=document.getElementById("menulogout")
-let menuaboutusers=document.getElementById("menuaboutusers")
-let menuonboarding=document.getElementById("menuonboarding")
-let menuloginbtn=document.getElementById("menuloginbtn")
-let menusignupbtn=document.getElementById("menusignupbtn")
-let menuname=document.getElementById("menuname")
-let menuemail=document.getElementById("menuemail")
 
-menuhome.style.display="none"
-menulogout.style.display="none"
-menuaboutusers.style.display="none"
-menuonboarding.style.display="none"
-menuloginbtn.style.display="none"
-menusignupbtn.style.display="none"
-menuname.style.display="none"
-menuemail.style.display="none"
+  let menuhome = document.getElementById("menuhome")
+  let menulogout = document.getElementById("menulogout")
+  let menuaboutusers = document.getElementById("menuaboutusers")
+  let menuonboarding = document.getElementById("menuonboarding")
+  let menuloginbtn = document.getElementById("menuloginbtn")
+  let menusignupbtn = document.getElementById("menusignupbtn")
+  let menuname = document.getElementById("menuname")
+  let menuemail = document.getElementById("menuemail")
 
+  menuhome.style.display = "none"
+  menulogout.style.display = "none"
+  menuaboutusers.style.display = "none"
+  menuonboarding.style.display = "none"
+  menuloginbtn.style.display = "none"
+  menusignupbtn.style.display = "none"
+  menuname.style.display = "none"
+  menuemail.style.display = "none"
+
+  let screen = window.innerWidth
+  if (screen < 451) {
+    menuhome.style.display = "none"
+    menuaboutusers.style.display = "none"
+    menuonboarding.style.display = "none"
+    menuloginbtn.style.display = "block"
+    menusignupbtn.style.display = "block"
+    menuname.style.display = "none"
+    menuemail.style.display = "none"
+    
+  }
   let search = document.getElementById("search")
   let alltag = document.getElementsByTagName("*")
   let home = document.getElementById("home")
   let dashboard = document.getElementById("dashboard")
 
   let profile = document.getElementById("profile")
-  
+
   let name = document.getElementById("name")
   name.style.display = "none"
 
   profile.addEventListener("click", function () {
+
     menu.style.display = "block"
 
   })
@@ -208,12 +220,12 @@ menuemail.style.display="none"
   let onboarding = document.getElementById("onboarding")
   let isLoggedin = localStorage.getItem("isLoggedin")
   let loginbtn = document.getElementById("loginbtn")
-  
+
   let signupbtn = document.getElementById("signupbtn")
-  
+
   let storedname = localStorage.getItem("storedname")
-let lastname=localStorage.getItem("lastname")
-let storedemail=localStorage.getItem("storedemail")
+  let lastname = localStorage.getItem("lastname")
+  let storedemail = localStorage.getItem("storedemail")
 
 
 
@@ -232,10 +244,7 @@ let storedemail=localStorage.getItem("storedemail")
     onboarding.scrollIntoView({ behavior: 'smooth' });
   })
 
-
-
-
-
+  
 
 </script>
 <script src="afterlogin.js"></script>

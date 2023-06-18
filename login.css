@@ -5,11 +5,11 @@ body {
 
 }
 
-#login{
+#login {
     margin-left: 200px;
     margin-top: 50px;
-   border-radius: 20px;
-  /* border: solid teal ; */
+    border-radius: 20px;
+    /* border: solid teal ; */
     height: 600px;
     width: 400px;
     background-color: white;
@@ -18,67 +18,104 @@ body {
 
 }
 
-#login>div:nth-child(2){
-   margin-bottom: 10px;
+#login>div:nth-child(2) {
+    margin-bottom: 10px;
 }
 
 
-form{
+form {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
-form>input{
+
+form>input {
     padding: 10px;
-  border: solid 1px grey;
-  border-radius: 10px;
+    border: solid 1px grey;
+    border-radius: 10px;
 }
-form>input:nth-child(3){
-/* background-color: rgb(60, 60, 206); */
-background-color: rgb(32, 32, 173);
-color: whitesmoke;
-font-size: larger;
-border-radius: 20px;
+
+form>input:nth-child(3) {
+    /* background-color: rgb(60, 60, 206); */
+    background-color: rgb(32, 32, 173);
+    color: whitesmoke;
+    font-size: larger;
+    border-radius: 20px;
 
 }
-form>input:nth-child(3):focus{
-transform: scale(0.95);
+
+form>input:nth-child(3):focus {
+    transform: scale(0.95);
 }
-#other{
+
+#other {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     text-align: center;
-align-items: center;
-gap: 10px;
+    align-items: center;
+    gap: 10px;
 }
-#other>a{
+
+#other>a {
     text-decoration: none;
     border: grey solid 1px;
     width: 300px;
     padding: 10px;
-   border-radius: 20px;
+    border-radius: 20px;
     text-align: center;
     align-items: center;
     vertical-align: middle;
     justify-content: center;
     align-content: center;
 }
-p{
-text-align: center;
+
+p {
+    text-align: center;
 
 }
 
-img{
+img {
     height: 20px;
     width: 20px;
     vertical-align: middle;
 }
 
-#logo>img{
+#logo{
+   text-align: center;
+   margin-top: 20px;
+}
+#logo>img {
     width: 150px;
- height: 50px;
- position: absolute;
- left: 330px;
- top: 590px;
+    height: 50px;
+  
+    
+}
+
+
+@media screen and (max-width:451px) {
+   
+    #login {
+        margin-left: 1%;
+        margin-top: 15%;
+        border-radius: 20px;
+        /* border: solid teal ; */
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        padding: 30px;
+        box-sizing: border-box;
+    
+    }
+    #logo{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+     }
+    #logo>img {
+        width: 150px;
+        height: 50px;
+      
+    
+    }
 }
