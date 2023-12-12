@@ -2,4 +2,4 @@
 
 This is a website for WordWise languages learning app.
 
-Netlify Link: https://venerable-dodol-cb93c5.netlify.app/
+Netlify Link: https://wordwise-language-learning.netlify.app/
